@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="RAGAR">
+    <meta name="keywords" content="li, td, ul, ol, img...">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FullStack G-70</title>
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script type="text/javascript" src="js/misjs.js"></script>
+</head>
+<body class="container">
+    <hr>
+    <h1 class="rojo">LISTAS des-ORDENADAS</h1>
+    <hr>
+    <ul type="circle">
+        <font face="ink free" size="3" color="blue">
+            <li><a href="https://developer.mozilla.org/es/docs/Web/HTML">HTML</a></li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </font>
+    </ul>
+    <hr/>
+    <hr>
+    <h1>LISTAS ORDENADAS</h1>
+    <hr>
+    <ol type="I" start="10" reversed>
+        <font face="ink free" size="3" color="blue">
+            <li><a href="https://developer.mozilla.org/es/docs/Web/HTML">HTML</a></li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li><a href="#imagenes">imágenes</a></li>
+            <li><a href="#enlaces">enlaces</a></li>
+            <li><a href="#tablas">tablas</a></li>
+            <li><a href="#contenedoras">contenedoras</a></li>
+            <li><a href="#javascript">JS</a></li>
+            <li><a href="#formularios">Formularios</a></li>
+            <li><a href="#trans">TRANSITION</a></li>
+            <li><a href="#animation">ANIMATION</a></li>
+        </font>
+    </ol>
+    <hr/>
+    <hr/>
+    <h1>FORMATEO DE ELEMENTOS</h1>
+    <hr/>
+    <div class="enfila">
+        <p>Este es un parrafo normal</p>
+        <p>En <b>negrita</b> el parrafo</p>
+        <p>Texto <big>muy</big> grande</p>
+        <p>Texto <i>cursiva</i> en parrafo</p>
+        <p>Texto <small>pequeño</small> en parrafo</p>
+        <p>Texto <strong>fuerte</strong> en parrafo</p>
+        <p>Texto <sub>sub</sub> en parrafo</p>
+        <p>Texto <ins>ins</ins> en parrafo</p>
+        <p>Texto <del>eliminado</del> en parrafo</p>
+    </div>
+    <hr/>
+    <hr/>
+    <h1>ENCABEZADOS HTML</h1>
+    <hr/>
+    <h1>Encabezado h1</h1>
+    <h2>Encabezado h2</h2>
+    <h3>Encabezado h3</h3>
+    <h4>Encabezado h4</h4>
+    <h5>Encabezado h5</h5>
+    <h6>Encabezado h6</h6>
+    <hr/>
+    <h1>ATRIBUTOS</h1>
+    <hr/>
+    <p style="text-align: justify;"><font face="Narrow" size="5" color="red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quod porro obcaecati earum ipsa explicabo suscipit temporibus dignissimos, cumque, labore fugit veniam aliquam numquam quam repudiandae doloribus? Laudantium, assumenda earum.</font></p>
+    <hr/>
+    <section id="enlaces">
+        <hr>
+        <h1>ENLACES</h1>
+        <hr>
+        <a href="https://talentotech.gov.co/portal" 
+        target="_self">TalentoTech-self</a>
+        <br>
+        <a href="https://talentotech.gov.co/portal" target="_blank">TalentoTech-blank</a>
+        <br>
+        <a href="https://talentotech.gov.co/portal" target="mm">TalentoTech-iframe</a>
+
+        <br>
+        <iframe name="mm" src="mimarco.html" frameborder="1" width="70%" height="300"></iframe>
+        <br>
+
+        <a href="#">IR AL PPIO</a>
+    </section>
+    
+    <section id="imagenes">
+        <hr>
+        <h1>IMAGENES</h1>
+        <hr>
+        <img src="https://media.istockphoto.com/id/2101175462/es/foto/ruta-de-trekking-en-las-monta%C3%B1as-al-atardecer-de-verano.jpg?s=612x612&w=is&k=20&c=HIIz3eZElHOT-Rob73F9thZ4zioq0fO-YXAVo_WQ3BA=" alt="imagen no disponible" width="25%" height="25%">
+        <img src="img/imagen1.png" alt="cargando..." width="25%" height="25%">
+        <a href="#">ir al ppio</a>
+    </section>
+
+    <section id="tablas">
+        <hr>
+        <h1>TABLAS</h1>
+        <hr>
+
+        <table border="1" cellpadding="10" cellspacing="25">
+            <tr class="resaltar">
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Ciudad</th>
+            </tr>
+            <tr>
+                <td colspan="2">Laura</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Francisco</td>
+                <td>20</td>
+                <td>Cali</td>
+            </tr>
+            <tr>
+                <td>Luis</td>
+                <td rowspan="2">30</td>
+                <td>Cartagena</td>
+            </tr>
+            <tr>
+                <td>Andres</td>
+                <td>Cartagena</td>
+            </tr>
+        </table>
+
+        <table border="1">
+            <thead style="background-color: dodgerblue;">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Edad</th>
+                    <th>Ciudad</th>
+                </tr>
+            </thead>
+            
+            <tbody style="background-color: gray;">
+                <tr>
+                    <td colspan="2">Laura</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>Francisco</td>
+                    <td>20</td>
+                    <td>Cali</td>
+                </tr>
+                <tr>
+                    <td>Luis</td>
+                    <td rowspan="2">30</td>
+                    <td>Cartagena</td>
+                </tr>
+                <tr>
+                    <td>Andres</td>
+                    <td>Cartagena</td>
+                </tr>
+            </tbody>
+
+            <tfoot class="resaltar">
+                <tr>
+                    <td colspan="3">AQUI VAN LOS TOTALES</td>
+                </tr>
+            </tfoot>
+            
+        </table>
+
+        <a href="#">ir al ppio</a>
+    </section>
+
+    <section id="contenedoras">
+        <hr>
+        <h1>CONTENEDORAS</h1>
+        <hr>
+
+        <div id="tt" class="resaltar">Aquí tenemos el <strong>texto</strong> de una etiqueta div</div>
+
+        <a href="#">ir al ppio</a>
+    </section>
+
+    <section id="javascript">
+        <hr>
+        <h1>JAVASCRIPT</h1>
+        <hr>
+
+        <div id="cambiar" class="resaltar">Aquí tenemos la funcionalidad con <strong>javascript</strong> en html</div>
+        <div>HOLA SOY UN DIV ++++++++++++++</div>
+
+        <a href="#">ir al ppio</a>
+    </section>
+
+    <section id="formularios">
+        <hr>
+        <h1>FORMULARIOS</h1>
+        <hr>
+
+        <form action="/login/auth" method="post">
+            <label for="usuario">Usuario</label>
+            <input type="email" id="usuario" name="usuario" placeholder="ingrese email"/>
+            <br>
+            <label for="passwd">Contraseña</label>
+            <input type="password" id="passwd" name="passwd" placeholder="contraseña"/>
+            <br>
+            <label for="msg">Mensaje</label>
+            <textarea name="msg" id="msg" rows="5" cols="50" placeholder="que quieres decir hoy"></textarea>
+            <br>
+            <label class="resaltar"  for="genero">Genero</label>
+            <input type="radio" name="genero" value="M">Masculino
+            <input type="radio" name="genero" value="F">Femenino
+            <br>
+            <label class="resaltar" for="pastie">Pasatiempos</label>
+            <input type="checkbox" name="pastie" value="L">Lectura
+            <input type="checkbox" name="pastie" value="T">Trotar
+            <input type="checkbox" name="pastie" value="D">Dormir
+            <input type="checkbox" name="pastie" value="Tv">Televisión
+            <br>
+            <input type="submit" value="Enviar"/>
+        </form>
+
+        <a href="#">ir al ppio</a>
+    </section>
+
+    <section id="javascript">
+        <hr>
+        <h1>SELECTOR DE DESCENDIENTES</h1>
+        <hr>
+
+        <div id="estilo">
+            <p class="primer">
+                este es un parrafo <em>masssssssss</em>
+            </p>
+        </div>
+
+        <a href="#">ir al ppio</a>
+    </section>
+
+    <section id="trans">
+        <hr>
+        <h1>TRANSITION</h1>
+        <hr>
+
+        <button type="button" onclick="despues()">Salvar</button>
+
+        <a href="#">ir al ppio</a>
+    </section>
+
+    <section id="animation">
+        <hr>
+        <h1>ANIMA</h1>
+        <hr>
+
+        <div class="ani">
+            HOLA ESTE ES UN DIV ++++++++++++++++
+        </div>
+
+        <a href="#">ir al ppio</a>
+    </section>
+
+</body>
+</html>

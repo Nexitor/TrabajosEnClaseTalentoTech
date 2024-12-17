@@ -1,0 +1,91 @@
+
+
+body {
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: chartreuse;
+}
+
+.resaltar {
+    color: #aed9e0;
+    font-weight: bold;
+    background-color: chartreuse;
+}
+
+p {
+    background-color: aqua;
+}
+
+#imagenes {
+    background-color: blue;
+}
+
+.estilo2 {
+    color: red;
+}
+
+div {
+    background-color: yellow;
+}
+
+#estilo .primer em {
+    color: red;
+}
+
+.rojo {
+    color: red;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    background-color: blue;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(144, 207, 18);
+    padding: 20px;
+    border-radius: 100px;
+    box-shadow: 0 0 20px rgba(125,12,125,0.9);
+}
+
+.enfila {
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    background-color: red;
+    color: yellow;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay: 0.5s;
+}
+
+button:hover {
+    background-color: chartreuse;
+    cursor: pointer;
+    color: blue;
+    transform: scale(1.5);
+    border-radius: 15px;
+}
+
+@keyframes anima {
+    0% {
+        background-color: red;
+        translate: 0px 0px;
+    }
+    50% {
+        background-color: green;
+        translate: 100px 0px;
+    }
+    100% {
+        background-color: yellow;
+        translate: 400px 0px;
+    }
+}
+
+.ani {
+    background-color: red;
+    animation: anima 4s infinite ;
+}
