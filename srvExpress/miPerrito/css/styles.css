@@ -1,0 +1,215 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+h1 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #bb86fc;
+    margin: 0;
+}
+
+form {
+    background-color: #1e1e1e;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #bb86fc;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: calc(100% - 10px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #e0e0e0;
+    background-color: #2c2c2c;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #bb86fc;
+    outline: none;
+}
+
+textarea {
+    width: calc(100% - 10px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #e0e0e0;
+    background-color: #2c2c2c;
+    resize: none; /* Evita el redimensionamiento manual del textarea */
+    transition: border-color 0.3s, height 0.3s;
+    min-height: 50px; /* Altura mínima */
+}
+
+textarea:focus {
+    border-color: #bb86fc;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #bb86fc;
+    color: #121212;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #9d63e7;
+}
+
+#rtaMyPet {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #2c2c2c;
+    border: 1px solid #333;
+    border-radius: 5px;
+    color: #e0e0e0;
+    font-size: 16px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #2c2c2c;
+}
+
+thead th {
+    color: #bb86fc;
+    text-align: left;
+    padding: 10px;
+    font-weight: bold;
+    border-bottom: 1px solid #333;
+}
+
+tbody tr {
+    transition: background-color 0.3s;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #2c2c2c;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #121212;
+}
+
+tbody tr:hover {
+    background-color: #333;
+}
+
+td {
+    padding: 10px;
+    color: #e0e0e0;
+    border-bottom: 1px solid #333;
+    text-align: left;
+}
+
+td:last-child {
+    text-align: justify;
+}
+
+/* Diseño responsive */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    form {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    #rtaMyPet {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    #rtaMyPet {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+    thead th, td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    table {
+        font-size: 12px;
+    }
+    thead th, td {
+        padding: 6px;
+    }
+}
