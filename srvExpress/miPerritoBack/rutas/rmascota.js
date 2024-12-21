@@ -6,10 +6,10 @@ module.exports = function(app) {
     app.route('/mcta/getAllMascotas')
         .get( ctrlMascota.getAllMascotas ) ;
 
-    app.route('/mcta/getMascotaXnombre/:pnom')
-        .get( ctrlMascota.getMascotaXnombre ) ;
+    app.route('/mcta/getMascotaXnombre')
+        .post( ctrlMascota.getMascotaXnombre );
 
-    app.route( '/mcta/addMascotaXmp' )
+    app.route( '/mcta/addMascota' )
         .get( ctrlMascota.addMascota )
         .post( ctrlMascota.addMascotaXmp ) ;
 }

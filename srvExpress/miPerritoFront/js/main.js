@@ -1,8 +1,8 @@
-var petDB = "http://localhost:3000/mcta/getAllMascotas"
+var petDB = "http://localhost:3000/"
 
 function getPets() {
 
-    fetch(petDB, {
+    fetch(petDB + "mcta/getAllMascotas", {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
@@ -53,30 +53,43 @@ function conPet() {
 
 function searchPets() {
 
-    console.log("entre")
-    fetch(petDB, {
-        method: "GET",
+    var pData = {
+        Nommas: document.getElementById("name").value
+    }
+
+
+    fetch(petDB + "mcta/getMascotaXnombre", {
+        method: "POST",
         headers: {
             "Content-Type": "application/json"
-        }
+        },
+        body: JSON.stringify(pData)
     })
         .then((rta1) => { return (rta1.json()) })
         .then((rta) => {
 
-            let name = document.getElementById("name").value
+            if (rta.rta === "ER") {
 
-            for (i = 0; i < rta.length; i++) {
-                if (rta[i].Nommas === name) {
+                document.getElementById("name").value = ""
+                document.getElementById("race").value = ""
+                document.getElementById("gen").value = ""
+                document.getElementById("recom").value = ""
 
-                    document.getElementById("name").value = rta[i].Nommas
-                    document.getElementById("race").value = rta[i].Raza
-                    document.getElementById("gen").value = rta[i].Genero
-                    document.getElementById("recom").value = rta[i].Recomendaciones
+                document.getElementById("rtaMyPet").innerHTML = rta.data.msg
 
-                }
+            } else {
+                document.getElementById("race").value = rta.data.Raza
+                document.getElementById("gen").value = rta.data.Genero
+                document.getElementById("recom").value = rta.data.Recomendaciones
+
+                document.getElementById("rtaMyPet").innerHTML = "Aquí va la rta"
+                
             }
 
-        })
+
+
+        }
+        )
         .catch((err) => {
             document.getElementById("rtaMyPet").innerHTML = err
         })
