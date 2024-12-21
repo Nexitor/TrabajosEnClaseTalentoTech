@@ -12,6 +12,7 @@ function getPets() {
         .then((rta) => {
 
             var table = document.getElementById("petsTab").querySelector("tbody")
+            table.innerHTML = "";
 
             for (i = 0; i < rta.length; i++) {
                 let tr = document.createElement("tr")
@@ -83,7 +84,51 @@ function searchPets() {
                 document.getElementById("recom").value = rta.data.Recomendaciones
 
                 document.getElementById("rtaMyPet").innerHTML = "Aquí va la rta"
-                
+
+            }
+
+
+
+        }
+        )
+        .catch((err) => {
+            document.getElementById("rtaMyPet").innerHTML = err
+        })
+
+}
+
+function deletePets() {
+
+    var pData = {
+        Nommas: document.getElementById("name").value
+    }
+
+
+    fetch(petDB + "mcta/deleteMascotaXnombre", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(pData)
+    })
+        .then((rta1) => { return (rta1.json()) })
+        .then((rta) => {
+
+            if (rta.rta === "ER") {
+
+                document.getElementById("name").value = ""
+                document.getElementById("race").value = ""
+                document.getElementById("gen").value = ""
+                document.getElementById("recom").value = ""
+
+                document.getElementById("rtaMyPet").innerHTML = rta.data.msg
+
+            } else {
+
+                document.getElementById("rtaMyPet").innerHTML = `Se elimino ${pData.Nommas} con exito`
+
+                getPets()
+
             }
 
 

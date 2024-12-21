@@ -9,6 +9,9 @@ module.exports = function(app) {
     app.route('/mcta/getMascotaXnombre')
         .post( ctrlMascota.getMascotaXnombre );
 
+    app.route('/mcta/deleteMascotaXnombre')
+    .post( ctrlMascota.deleteMascotaXnombre );
+
     app.route( '/mcta/addMascota' )
         .get( ctrlMascota.addMascota )
         .post( ctrlMascota.addMascotaXmp ) ;
