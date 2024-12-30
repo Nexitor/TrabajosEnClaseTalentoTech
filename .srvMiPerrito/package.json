@@ -1,0 +1,16 @@
+{
+  "name": "srvmiperrito",
+  "version": "1.0.0",
+  "description": "Servidor para miperrito.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "author": "Sebastian",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "morgan": "^1.10.0"
+  }
+}

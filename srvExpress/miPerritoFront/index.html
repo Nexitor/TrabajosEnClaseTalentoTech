@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiPerrito</title>
+    <script src="./js/main.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <h1>Mi perrito.com</h1>
+
+    <form onsubmit="conPet(); return false">
+
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" placeholder="Nombre mascota">
+        <br>
+        <label for="gen">Genero</label>
+        <input type="text" id="gen" name="gen" placeholder="Edad mascota">
+        <br>
+        <label for="race">Raza</label>
+        <input type="text" id="race" name="race" placeholder="Raza de mi mascota">
+        <br>
+        <label for="recom">Recomendaciones</label>
+        <textarea id="recom" name="recom" placeholder="Genero de mi mascota"></textarea>
+        <br>
+        <button>Enviar</button>
+        <br><br>
+        <button type="button" onclick="searchPets()">Buscar mascota</button>
+        <br><br>
+        <button type="button" onclick="deletePets()">Eliminar mascota</button>
+
+
+        <div id="rtaMyPet">Aquí va la rta</div>
+
+        <table id="petsTab">
+            <thead>
+    
+                <th>Nombre</th>
+                <th>Raza</th>
+                <th>Genero</th>
+                <th>Recomendaciones</th>
+    
+            </thead>
+            <tbody></tbody>
+        </table>
+    </form>
+
+
+
+
+</body>
+</html>
