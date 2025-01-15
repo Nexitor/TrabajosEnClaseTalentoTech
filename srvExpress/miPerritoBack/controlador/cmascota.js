@@ -71,9 +71,33 @@ var myPets = [
 	}
 	]
 
+const Mascota = require('../modelos/mimascota')
+
 exports.getAllMascotas = (req,res) => {
 
-    res.json(myPets)
+	try {
+		
+		Mascota.find()
+		.then((rta) => {
+
+			console.log(`----------> ${rta}`)
+			res.send( {msg:"OK", info:rta} )
+
+		})
+		.catch((e) => {
+
+			console.log(`ERROR: ${e}`)
+			res.send( {msg:"ER", info:e} )
+		
+		})
+
+		
+
+	} catch (error) {
+		console.log(`ERROR: ${error}`)
+		res.send( {msg:"ER", info:error} )
+	}
+
 } ;
 
 exports.getMascotaXnombre = (req,res) => {
