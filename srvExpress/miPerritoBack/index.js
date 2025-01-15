@@ -1,4 +1,6 @@
 
+const mongoose = require('mongoose')
+
 const express = require('express') ;
 const morgan  = require('morgan') ;
 const path    = require('path') ;
@@ -8,6 +10,26 @@ const cors    = require('cors')
 const hostname = "localhost" ;
 const port     = 3000 ;
 
+// Se configura la conexion a la bd de mongoDB
+
+var bdURL = "mongodb://127.0.0.1:27017/bdMiPerrito"
+mongoose.connect(bdURL)
+
+// Eventos de la base de datos
+
+mongoose.connection.on('connected'   , () => {console.log(`Conexion realizada a mongoDB: ${bdURL}`)} )
+mongoose.connection.on('error'       , (err) => {console.log(`NO hay conexion a mongoDB: ${err}`)} )
+mongoose.connection.on('disconnected', (msg) => {console.log(`Desconectado de mongoDB: ${msg}`)} )
+
+process.on('SIGNIN', () => {
+    mongoose.connection.close( () => {
+        console.log("Conexion a mongoDB terminada por finalización del servidor")
+        process.exit(0)
+    })
+})
+
+
+//******************************************** */
 const app = express() ;
 
 app.use(morgan('dev')) ;

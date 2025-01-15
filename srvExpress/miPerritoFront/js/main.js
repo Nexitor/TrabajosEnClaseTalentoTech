@@ -14,23 +14,23 @@ function getPets() {
             var table = document.getElementById("petsTab").querySelector("tbody")
             table.innerHTML = "";
 
-            for (i = 0; i < rta.length; i++) {
+            for (i = 0; i < rta.info.length; i++) {
                 let tr = document.createElement("tr")
                 // Nombre
                 let tdNom = document.createElement("td")
-                tdNom.innerHTML = rta[i].Nommas
+                tdNom.innerHTML = rta.info[i].Nommas
                 tr.appendChild(tdNom)
                 // Raza
                 let tdRace = document.createElement("td")
-                tdRace.innerHTML = rta[i].Raza
+                tdRace.innerHTML = rta.info[i].Raza
                 tr.appendChild(tdRace)
                 // Genero
                 let tdGen = document.createElement("td")
-                tdGen.innerHTML = rta[i].Genero
+                tdGen.innerHTML = rta.info[i].Genero
                 tr.appendChild(tdGen)
                 // Recomendaciones
                 let tdRecom = document.createElement("td")
-                tdRecom.innerHTML = rta[i].Recomendaciones
+                tdRecom.innerHTML = rta.info[i].Recomendaciones
                 tr.appendChild(tdRecom)
 
                 table.appendChild(tr)
