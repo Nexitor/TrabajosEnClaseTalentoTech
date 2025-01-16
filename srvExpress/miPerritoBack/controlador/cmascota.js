@@ -79,22 +79,15 @@ exports.getAllMascotas = (req,res) => {
 		
 		Mascota.find()
 		.then((rta) => {
-
-			console.log(`----------> ${rta}`)
 			res.send( {msg:"OK", info:rta} )
-
 		})
 		.catch((e) => {
-
-			console.log(`ERROR: ${e}`)
 			res.send( {msg:"ER", info:e} )
-		
 		})
 
 		
 
 	} catch (error) {
-		console.log(`ERROR: ${error}`)
 		res.send( {msg:"ER", info:error} )
 	}
 
@@ -102,53 +95,43 @@ exports.getAllMascotas = (req,res) => {
 
 exports.getMascotaXnombre = (req,res) => {
 
-	var myRES = {
-		rta: "ER",
-		data: {}
+	try {
+		
+		Mascota.find( {Nommas:req.body.Nommas} )
+		.then((rta) => {
+			res.send( {msg:"OK", info:rta} )
+		})
+		.catch((e) => {
+			res.send( {msg:"ER", info:e} )
+		})
+
+		
+
+	} catch (error) {
+		res.send( {msg:"ER", info:error} )
 	}
-
-	var pNom = req.body.Nommas
-
-	for(i = 0; i < myPets.length; i++){
-		if(myPets[i].Nommas === pNom){
-			myRES.rta = "OK"
-			myRES.data = myPets[i]
-			
-			break
-		}
-	}
-
-	if(myRES.rta === "ER"){
-		myRES.data = {msg: "Mascota no existe"}
-	}
-
-	res.json(myRES)
 
 } ;
 
 exports.deleteMascotaXnombre = (req,res) => {
 
-	var myRES = {
-		rta: "ER",
-		data: {}
+	
+	try {
+		
+		Mascota.deleteOne( {Nommas:req.body.Nommas} )
+		.then((rta) => {
+			res.send( {msg:"OK", info:rta} )
+		})
+		.catch((e) => {
+			res.send( {msg:"ER", info:e} )
+		})
+
+		
+
+	} catch (error) {
+		res.send( {msg:"ER", info:error} )
 	}
 
-	var pNom = req.body.Nommas
-
-	for(i = 0; i < myPets.length; i++){
-		if(myPets[i].Nommas === pNom){
-			myRES.rta = "OK"
-			myPets.splice(i,1)
-			myRES.data = myPets
-			break
-		}
-	}
-
-	if(myRES.rta === "ER"){
-		myRES.data = {msg: "Mascota no existe"}
-	}
-
-	res.json(myRES)
 
 } ;
 
