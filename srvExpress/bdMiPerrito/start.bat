@@ -1,0 +1,1 @@
+mongod --dbpath="C:\Users\Sebastian\Desktop\Code\TalentoTech\clases\srvExpress\bdMiPerrito\data" -bind_ip 127.0.0.1
